@@ -7,7 +7,7 @@ export function createVideo() {
   video.loop = true
   video.muted = true
 
-  video.play()
+  video.addEventListener('canplay', () => video.play(), { once: true })
 
   return video
 }

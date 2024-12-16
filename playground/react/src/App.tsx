@@ -40,14 +40,6 @@ const App = () => {
     }
   }, [canvasRef.current])
 
-  useEffect(() => {
-    return () => {
-      if (effectsCtx) {
-        effectsCtx.destroy()
-      }
-    }
-  }, [])
-
   return (
     <div className="app">
       <canvas ref={canvasRef} width="720" height="480"></canvas>
